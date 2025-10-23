@@ -79,8 +79,13 @@ build {
   sources = ["source.vmware-iso.swiss-army-vmware"]
 
   provisioner "shell" {
-    execute_command = "echo 'packer'|{{ .Vars }} sudo -S -E bash '{{ .Path }}'"
-    inline          = ["apt -y update && apt -y upgrade"]
+    scripts = [
+      "scripts/system-initial-configuration.sh",
+      "scripts/network-monitoring-and-analysis-tooling.sh",
+      "scripts/prune-packages.sh"
+    ]
+
+    execute_command = "sudo -E /bin/bash '{{ .Path }}'"
   }
 
 }
