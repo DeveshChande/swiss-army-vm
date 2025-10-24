@@ -82,6 +82,7 @@ build {
     scripts = [
       "scripts/system-initial-configuration.sh",
       "scripts/network-monitoring-and-analysis-tooling.sh",
+      "scripts/vulnerability-assessment-tooling.sh",
       "scripts/prune-packages.sh"
     ]
 

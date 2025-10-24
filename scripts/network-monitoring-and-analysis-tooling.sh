@@ -5,3 +5,6 @@ echo "wireshark-common wireshark-common/install-setuid boolean false" | sudo deb
 
 sudo apt -y install wireshark
 sudo apt -y install tshark
+
+sudo apt -y install tcpdump
+sudo apt -y install net-tools
