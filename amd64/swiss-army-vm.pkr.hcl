@@ -59,7 +59,7 @@ source "vmware-iso" "swiss-army-vmware" {
   disk_type_id     = "0"
   guest_os_type    = "debian10-64"
   headless         = false
-  http_directory   = "http"
+  http_directory   = "../http"
   iso_checksum     = "${var.iso_checksum}"
   iso_url          = "${var.iso_url}"
   shutdown_command = "echo 'packer'|sudo -S shutdown -P now"
@@ -80,10 +80,10 @@ build {
 
   provisioner "shell" {
     scripts = [
-      "scripts/system-initial-configuration.sh",
-      "scripts/network-monitoring-and-analysis-tooling.sh",
-      "scripts/vulnerability-assessment-tooling.sh",
-      "scripts/prune-packages.sh"
+      "../scripts/system-initial-configuration.sh",
+      "../scripts/network-monitoring-and-analysis-tooling.sh",
+      "../scripts/vulnerability-assessment-tooling.sh",
+      "../scripts/prune-packages.sh"
     ]
 
     execute_command = "sudo -E /bin/bash '{{ .Path }}'"
