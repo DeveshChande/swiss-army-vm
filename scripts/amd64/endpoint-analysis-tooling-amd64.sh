@@ -14,11 +14,10 @@ sudo chmod +x /usr/bin/evtx-dump
 apt -y install automake libtool make gcc pkg-config
 cd /home/packer/Downloads
 sudo curl -fLO https://github.com/VirusTotal/yara/archive/refs/tags/v4.5.5.tar.gz
-pwd
-ls -la /home/packer/Downloads
 sudo tar -xzf v4.5.5.tar.gz
 cd /home/packer/Downloads/yara-4.5.5
 sudo ./bootstrap.sh
 sudo ./configure
 sudo make
 sudo make install
+sudo cp /home/packer/Downloads/yara-4.5.5/yara /usr/bin/
