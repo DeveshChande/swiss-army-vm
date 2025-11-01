@@ -9,3 +9,16 @@ wget "https://pkg.osquery.io/deb/osquery_5.19.0-1.linux_amd64.deb" && apt instal
 # evtx
 sudo curl -fL -o /usr/bin/evtx-dump https://github.com/omerbenamram/evtx/releases/download/v0.9.0/evtx_dump-v0.9.0-x86_64-unknown-linux-gnu
 sudo chmod +x /usr/bin/evtx-dump
+
+# YARA
+apt -y install automake libtool make gcc pkg-config
+cd /home/packer/Downloads
+sudo curl -fLO https://github.com/VirusTotal/yara/archive/refs/tags/v4.5.5.tar.gz
+pwd
+ls -la /home/packer/Downloads
+sudo tar -xzf v4.5.5.tar.gz
+cd /home/packer/Downloads/yara-4.5.5
+sudo ./bootstrap.sh
+sudo ./configure
+sudo make
+sudo make install
