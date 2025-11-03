@@ -8,3 +8,9 @@ sudo apt -y install tshark
 
 sudo apt -y install tcpdump
 sudo apt -y install net-tools
+
+# Scapy
+sudo pip3 install --break-system-packages scapy
+
+# tcpflow
+sudo apt -y install tcpflow
