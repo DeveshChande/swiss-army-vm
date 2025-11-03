@@ -24,3 +24,5 @@ sudo make
 sudo make install
 cp /home/packer/Downloads/yara-4.5.5/yara /usr/bin
 
+# GDB
+apt -y install gdb
