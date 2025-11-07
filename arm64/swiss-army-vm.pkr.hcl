@@ -119,14 +119,16 @@ build {
   sources = ["source.vmware-iso.swiss-army-vmware"]
 
   provisioner "shell" {
+   execute_command = "sudo -E /bin/bash '{{ .Path }}'"
+
     scripts = [
-      "scripts/system-initial-configuration.sh",
-      "scripts/network-monitoring-and-analysis-tooling.sh",
-      "scripts/vulnerability-assessment-tooling.sh",
-      "scripts/endpoint-analysis-tooling.sh",
-      "scripts/prune-packages.sh"
+      "scripts/system-initial-configuration-arm64.sh",
+      "scripts/network-monitoring-and-analysis-tooling-arm64.sh",
+      "scripts/vulnerability-assessment-tooling-arm64.sh",
+      "scripts/endpoint-analysis-tooling-arm64.sh",
+      "scripts/prune-packages-arm64.sh"
     ]
 
-    execute_command = "sudo -E /bin/bash '{{ .Path }}'"
+    
   }
 }
