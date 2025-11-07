@@ -24,3 +24,15 @@ if [ -f "./volatility3/requirements.txt" ]; then
 else
 ./vol3-venv/bin/pip install ./volatility3
 fi
+
+# Log2timeline Installation
+sudo pip3 install --break-system-packages plaso
+
+# Create python symlink for compatibility
+sudo ln -sf /usr/bin/python3 /usr/bin/python
+
+# Dumpzilla Installation
+cd /opt
+sudo git clone https://github.com/Busindre/dumpzilla.git
+sudo chmod +x /opt/dumpzilla/dumpzilla.py
+sudo ln -sf /opt/dumpzilla/dumpzilla.py /usr/local/bin/dumpzilla
