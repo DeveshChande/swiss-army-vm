@@ -84,7 +84,7 @@ build {
       "../scripts/amd64/network-monitoring-and-analysis-tooling-amd64.sh",
       "../scripts/amd64/vulnerability-assessment-tooling-amd64.sh",
       "../scripts/amd64/endpoint-analysis-tooling-amd64.sh",
-      "../scripts/amd64/file-analysis-tooling.sh",
+      "../scripts/amd64/file-analysis-tooling-amd64.sh",
       "../scripts/amd64/prune-packages-amd64.sh"
     ]
 
