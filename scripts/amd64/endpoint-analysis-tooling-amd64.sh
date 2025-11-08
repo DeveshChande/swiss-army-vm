@@ -20,3 +20,6 @@ if [ -f "./volatility3/requirements.txt" ]; then
 else
 ./vol3-venv/bin/pip install ./volatility3
 fi
+
+# ExifTool Installation
+sudo apt install -y libimage-exiftool-perl

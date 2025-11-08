@@ -36,3 +36,6 @@ cd /opt
 sudo git clone https://github.com/Busindre/dumpzilla.git
 sudo chmod +x /opt/dumpzilla/dumpzilla.py
 sudo ln -sf /opt/dumpzilla/dumpzilla.py /usr/local/bin/dumpzilla
+
+# ExifTool Installation
+sudo apt install -y libimage-exiftool-perl
