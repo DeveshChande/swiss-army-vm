@@ -59,7 +59,7 @@ source "vmware-iso" "swiss-army-vmware" {
   disk_type_id     = "0"
   guest_os_type    = "debian10-64"
   headless         = false
-  http_directory   = "../http"
+  http_directory   = "../http/amd64/"
   iso_checksum     = "${var.iso_checksum}"
   iso_url          = "${var.iso_url}"
   shutdown_command = "echo 'packer'|sudo -S shutdown -P now"
