@@ -80,7 +80,7 @@ source "vmware-iso" "swiss-army-vmware" {
   headless = false
   
   # HTTP server for preseed
-  http_directory = "http"
+  http_directory = "../http/arm64"
   
   # ISO configuration
   iso_checksum = "${var.iso_checksum}"
@@ -122,11 +122,11 @@ build {
    execute_command = "sudo -E /bin/bash '{{ .Path }}'"
 
     scripts = [
-      "scripts/system-initial-configuration-arm64.sh",
-      "scripts/network-monitoring-and-analysis-tooling-arm64.sh",
-      "scripts/vulnerability-assessment-tooling-arm64.sh",
-      "scripts/endpoint-analysis-tooling-arm64.sh",
-      "scripts/prune-packages-arm64.sh"
+      "../scripts/arm64/system-initial-configuration-arm64.sh",
+      "../scripts/arm64/network-monitoring-and-analysis-tooling-arm64.sh",
+      "../scripts/arm64/vulnerability-assessment-tooling-arm64.sh",
+      "../scripts/arm64/endpoint-analysis-tooling-arm64.sh",
+      "../scripts/arm64/prune-packages-arm64.sh"
     ]
 
     
