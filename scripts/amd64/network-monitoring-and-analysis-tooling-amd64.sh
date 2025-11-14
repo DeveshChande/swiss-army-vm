@@ -25,3 +25,6 @@ echo 'deb http://download.opensuse.org/repositories/security:/zeek/Debian_12/ /'
 
 sudo apt update
 sudo apt -y install zeek-lts
+
+apt-get -yq install tcpreplay
+apt-get -yq install hping3
