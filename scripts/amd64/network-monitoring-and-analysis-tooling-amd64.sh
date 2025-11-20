@@ -26,5 +26,14 @@ echo 'deb http://download.opensuse.org/repositories/security:/zeek/Debian_12/ /'
 sudo apt update
 sudo apt -y install zeek-lts
 
+# Make Zeek accessible system-wide
+echo 'export PATH=/opt/zeek/bin:$PATH' | sudo tee /etc/profile.d/zeek.sh
+sudo chmod +x /etc/profile.d/zeek.sh
+sudo ln -sf /opt/zeek/bin/zeek /usr/local/bin/zeek
+sudo ln -sf /opt/zeek/bin/zeekctl /usr/local/bin/zeekctl
+
+
 apt-get -yq install tcpreplay
 apt-get -yq install hping3
+
+
