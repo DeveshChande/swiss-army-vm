@@ -29,6 +29,15 @@ sudo apt-get install -y perl libparse-win32registry-perl git
 cd /opt
 sudo git clone https://github.com/keydet89/RegRipper3.0.git regripper
 sudo chmod +x /opt/regripper/rip.pl
+sudo sed -i '1s|.*|#!/usr/bin/perl|' /opt/regripper/rip.pl
+sudo tee /usr/local/bin/rip > /dev/null << 'EOF'
+#!/bin/bash
+cd /opt/regripper && ./rip.pl "$@"
+EOF
+  
+sudo chmod +x /usr/local/bin/rip
+
+
 sudo ln -s /opt/regripper/rip.pl /usr/local/bin/rip
 
 # Log2timeline Installation
