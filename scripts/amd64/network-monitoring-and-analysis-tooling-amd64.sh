@@ -32,8 +32,10 @@ sudo chmod +x /etc/profile.d/zeek.sh
 sudo ln -sf /opt/zeek/bin/zeek /usr/local/bin/zeek
 sudo ln -sf /opt/zeek/bin/zeekctl /usr/local/bin/zeekctl
 
-
+#Tcpreplay Installation
 apt-get -yq install tcpreplay
+
+# Hping3 Installation
 apt-get -yq install hping3
 
 
