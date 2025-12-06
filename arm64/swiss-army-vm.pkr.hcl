@@ -126,6 +126,7 @@ build {
       "../scripts/arm64/network-monitoring-and-analysis-tooling-arm64.sh",
       "../scripts/arm64/vulnerability-assessment-tooling-arm64.sh",
       "../scripts/arm64/endpoint-analysis-tooling-arm64.sh",
+      "../scripts/arm64/file-analysis-tooling-arm64.sh",
       "../scripts/arm64/prune-packages-arm64.sh",
       "../scripts/arm64/system-hardening.sh",
       "../scripts/arm64/setup-tool-updates.sh"
